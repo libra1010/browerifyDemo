@@ -1,0 +1,31 @@
+npm install -g gulp-cli //全局安装gulp-cli
+
+
+//安装typescript gulp gulp-typescript 到项目中
+// Gulp-typescript是TypeScript的一个Gulp插件
+npm install --save-dev typescript gulp gulp-typescript
+
+
+//webstrom 可以新建一个tsconfig.json 文件，这个文件可以配置怎样编译TypeScript
+
+//如果报 Local gulp not found in "xxx" 这种表示没有在项目中安装gulp 推荐安装gulp 等一些版本JS，安装在本地，当时候GIT忽略node_modules 文件夹，最终可以使用npm install 安装项目所需的JS库
+
+//项目中使用gulpfile
+//1:新建一个gulpfile.js 项目中的gulpfile.1.js 这样就可以编译TypeScript 文件了
+
+//2:使用gulp 压缩JS 具体查看gulpfile.2.js
+npm install gulp-minify-css gulp-concat gulp-uglify gulp-rename del --save-dev
+// gulp-minify-css 压缩CSS
+//gulp-concat 连接文件，合并文件
+// gulp-uglify  压缩JS
+//gulp-rename 变更名称
+//del 删除文件
+
+
+//3:集成 Browserify Browserify是可以将node的commonJs 转换成浏览器可以使用的JS代码的模块管理工具,意味着让你使用nodeJS的方式编写浏览器代码，比如可以使用模块管理带来的便利性，最终将使用的摸块合并成一个JS文件，方便浏览器使用
+//具体参见 gulpfile.4.js
+npm install --save-dev browserify tsify vinyl-source-stream
+// tsify是Browserify的一个插件，就像gulp-typescript一样，它能够访问TypeScript编译器。 vinyl-source-stream会将Browserify的输出文件适配成gulp能够解析的格式，它叫做 vinyl。
+
+
+
