@@ -1,3 +1,5 @@
+package.json 可以配置项目依赖哪些模块，最后获取项目源码是 可以直接使用npm install 就会自动安装所有依赖的模块
+
 npm install -g gulp-cli //全局安装gulp-cli
 
 
