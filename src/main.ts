@@ -1,18 +1,23 @@
 /**
  * Created by clam on 2016/12/19.
  */
-class  Test{
-    name:string;
-    constructor(_name:string){
+class  Test {
+    name: string;
+
+    constructor(_name: string) {
         this.name = _name;
     }
 
-    setName(_value:string){
-        this.name=_value;
+    setName(_value: string) {
+        this.name = _value;
     }
 
-    getName():string{
+    getName(): string {
         return this.name;
+    }
+
+    test(): string {
+        return "";
     }
 }
 

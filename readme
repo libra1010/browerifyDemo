@@ -25,11 +25,24 @@ npm install gulp-minify-css gulp-concat gulp-uglify gulp-rename del --save-dev
 
 
 //3:集成 Browserify Browserify是可以将node的commonJs 转换成浏览器可以使用的JS代码的模块管理工具,意味着让你使用nodeJS的方式编写浏览器代码，比如可以使用模块管理带来的便利性，最终将使用的摸块合并成一个JS文件，方便浏览器使用
-//具体参见 gulpfile.4.js
+//具体参见 gulpfile.3.js
 npm install --save-dev browserify tsify vinyl-source-stream
 // tsify是Browserify的一个插件，就像gulp-typescript一样，它能够访问TypeScript编译器。 vinyl-source-stream会将Browserify的输出文件适配成gulp能够解析的格式，它叫做 vinyl。
 
 
+//4:Watchify启动Gulp并保持运行状态，当你保存文件时自动编译。 帮你进入到编辑-保存-刷新浏览器的循环中。
+//Babel是个十分灵活的编译器，将ES2015及以上版本的代码转换成ES5和ES3。 你可以添加大量自定义的TypeScript目前不支持的转换器
+//Uglify帮你压缩代码，将花费更少的时间去下载它们。
+//安装 watchify 具体参见 gulpfile.4.js
+npm install --save-dev watchify gulp-util
 
+//5: 因为Uglify是用于混淆你的代码，所以我们还要安装vinyl-buffer和gulp-sourcemaps来支持sourcemaps。  sourcemaps 可以生成debug调试，类似于PDB这种符号文件吧。可以将压缩的JS映射到没有压缩的源文件
+//使用chrome浏览器，可以直接断点到TS代码
+//gulpfile.5.js 同样debug为true,和其他不同的就是 会有一个 bundle.js.map 文件
+//具体参见 gulpfile.5.js
+npm install --save-dev gulp-uglify vinyl-buffer gulp-sourcemaps
+
+
+//如果允许任务提示缺少什么包就自己手动装吧,我也不知道为什么没有自动解析依赖性
 
 

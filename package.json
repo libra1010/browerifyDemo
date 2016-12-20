@@ -13,6 +13,9 @@
     "typescript": "^2.1.4",
     "typings": "^2.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "gulp-concat":"2.6.1"
+    "gulp-concat":"2.6.1",
+    "detect-newline":"^2.1.0",
+    "gulp-sourcemaps":"^1.9.1",
+    "lazy-debug-legacy":"^0.0.1"
   }
 }
