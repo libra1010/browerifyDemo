@@ -42,6 +42,12 @@ npm install --save-dev watchify gulp-util
 //具体参见 gulpfile.5.js
 npm install --save-dev gulp-uglify vinyl-buffer gulp-sourcemaps
 
+//6:Babel 首先安装Babelify和ES2015的Babel预置程序。 和Uglify一样，Babelify也会混淆代码，因此我们也需要vinyl-buffer和gulp-sourcemaps。
+//默认情况下Babelify只会处理扩展名为 .js，.es，.es6和.jsx的文件，因此我们需要添加.ts扩展名到Babelify选项。
+//Babel是个十分灵活的编译器，将ES2015及以上版本的代码转换成ES5和ES3。 你可以添加大量自定义的TypeScript目前不支持的转换器
+//具体参见gulpfile.6.js
+npm install --save-dev babelify babel-preset-es2015 vinyl-buffer gulp-sourcemaps
+我们需要设置TypeScript目标为ES2015。 Babel稍后会从TypeScript生成的ES2015代码中生成ES5。 修改 tsconfig.json: compilerOptions target 修改为es2015
 
 //如果允许任务提示缺少什么包就自己手动装吧,我也不知道为什么没有自动解析依赖性
 

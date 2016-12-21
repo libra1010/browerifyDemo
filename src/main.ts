@@ -38,3 +38,24 @@ function write(content:string){
     document.write(content);
 }
 write("test");
+
+
+//测试async await
+// function delay(milliseconds: number) {
+//     return new Promise<void>(resolve => {
+//         setTimeout(resolve, milliseconds);
+//     });
+// }
+//
+// async function dramaticWelcome() {
+//     console.log("Hello");
+//
+//     for (let i = 0; i < 3; i++) {
+//         await delay(500);
+//         console.log(".");
+//     }
+//
+//     console.log("World!");
+// }
+//
+// dramaticWelcome();
