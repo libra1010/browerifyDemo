@@ -16,8 +16,13 @@ gulp.task("copy-html", function () {
         .pipe(gulp.dest("dist"));
 });
 
+gulp.task("copy-jquery",function(){
+    return gulp.src(["node_modules/jquery/dist/jquery.js"])
+        .pipe(gulp.dest("dist"));
+});
+
 //一个任务，依赖于copy-html 任务，会限制性copy-html任务，然后在执行当前任务
-gulp.task("gulp.3.default", ["copy-html"], function () {
+gulp.task("gulp.7.default", ["copy-html"], function () {
     //创建browserify entries表示文件入口，会将文件入口里面所有使用到的模块全部打包到bundle.js里面 debug:true 表示会生成map文件，让浏览器可以调试
     return browserify({
         basedir: '.',
