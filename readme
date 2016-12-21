@@ -49,6 +49,10 @@ npm install --save-dev gulp-uglify vinyl-buffer gulp-sourcemaps
 npm install --save-dev babelify babel-preset-es2015 vinyl-buffer gulp-sourcemaps
 我们需要设置TypeScript目标为ES2015。 Babel稍后会从TypeScript生成的ES2015代码中生成ES5。 修改 tsconfig.json: compilerOptions target 修改为es2015
 
+//7:加入JQUERY准备进入正题测试
+//具体参见gulpfile.7.js 和src/jquery.1.ts 文件
+npm install jquery --save-dev
+
 //如果允许任务提示缺少什么包就自己手动装吧,我也不知道为什么没有自动解析依赖性
 
 
